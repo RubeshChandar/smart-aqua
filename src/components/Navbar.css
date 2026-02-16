@@ -1,0 +1,141 @@
+/* ── Navbar ── */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background: rgba(10, 22, 40, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-logo img {
+    height: 48px;
+    width: auto;
+    border-radius: 6px;
+}
+
+.navbar-logo span {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+}
+
+.navbar-logo .logo-highlight {
+    color: var(--cyan-400);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--gray-300);
+    border-radius: 8px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--cyan-300);
+    background: rgba(56, 189, 248, 0.08);
+}
+
+.nav-links .nav-cta {
+    background: linear-gradient(135deg, var(--blue-400), var(--cyan-400));
+    color: var(--white);
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.nav-links .nav-cta:hover {
+    box-shadow: 0 4px 20px rgba(43, 125, 233, 0.4);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    padding: 8px;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2.5px;
+    background: var(--gray-200);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 32px 32px;
+        background: rgba(10, 22, 40, 0.97);
+        backdrop-filter: blur(24px);
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 12px 16px;
+        width: 100%;
+    }
+}

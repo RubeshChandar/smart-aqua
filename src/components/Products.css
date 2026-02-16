@@ -1,0 +1,191 @@
+/* ── Products ── */
+.products {
+    background:
+        radial-gradient(ellipse 60% 40% at 20% 20%, rgba(43, 125, 233, 0.08), transparent),
+        var(--navy-900);
+}
+
+/* Category Tabs */
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.category-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gray-400);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50px;
+    transition: var(--transition);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.category-tab:hover {
+    color: var(--cyan-300);
+    background: rgba(56, 189, 248, 0.06);
+    border-color: rgba(56, 189, 248, 0.15);
+}
+
+.category-tab.active {
+    color: var(--white);
+    background: linear-gradient(135deg, rgba(43, 125, 233, 0.3), rgba(56, 189, 248, 0.2));
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.tab-icon {
+    font-size: 1rem;
+}
+
+.tab-label {
+    font-size: 0.85rem;
+}
+
+.category-banner {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+}
+
+.category-banner-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.category-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-banner-text h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.category-banner-text p {
+    font-size: 1rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.product-desc {
+    font-size: 0.92rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.product-card-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cyan-300);
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 6px;
+}
+
+.product-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.product-benefits li {
+    font-size: 0.85rem;
+    color: var(--gray-300);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.benefit-check {
+    color: var(--cyan-400);
+    font-weight: 700;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .category-banner-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .category-tabs {
+        gap: 6px;
+    }
+
+    .category-tab {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .tab-icon {
+        font-size: 0.85rem;
+    }
+
+    .tab-label {
+        font-size: 0.8rem;
+    }
+}

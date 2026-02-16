@@ -1,0 +1,122 @@
+/* ── Contact ── */
+.contact {
+    background:
+        radial-gradient(ellipse 50% 50% at 50% 80%, rgba(43, 125, 233, 0.08), transparent),
+        var(--navy-900);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.contact-info>p {
+    color: var(--gray-400);
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-detail {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.contact-detail-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-detail strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.contact-detail span {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+}
+
+/* Form */
+.contact-form {
+    padding: 36px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-300);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray-500);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--cyan-400);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-submit {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
