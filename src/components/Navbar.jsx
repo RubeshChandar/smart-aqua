@@ -19,7 +19,7 @@ export default function Navbar() {
                 <a href="#home" className="navbar-logo">
                     <img src="/images/filter-icon.png" alt="Smart Aqua Technologies" />
                     <span>
-                        Smart <span className="logo-highlight">Aqua</span> Technologies <small>by rubesh</small>
+                        Smart <span className="logo-highlight">Aqua</span> Technologies
                     </span>
                 </a>
 
