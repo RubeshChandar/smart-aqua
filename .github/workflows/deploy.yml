@@ -28,7 +28,7 @@ jobs:
       - name: Deploy on Pi
         run: |
           ssh ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} "
-            cd ~/apps/sample-react &&
+            cd ~/web/smart-aqua &&
             git pull origin main &&
-            pm2 restart sample-react
+            pm2 restart smart-react
           "
